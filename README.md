@@ -9,4 +9,4 @@ the heartbeat of os by generating a regular interrupt to switch between tasks if
 * SVC and PendSV exceptions: These two exception types are essential for the
 operations of embedded OSs such as the implementation of context
 switching.
-                                                        ------------
+ *                                                       ------------
