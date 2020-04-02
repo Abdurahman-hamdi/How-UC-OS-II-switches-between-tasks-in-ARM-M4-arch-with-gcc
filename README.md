@@ -14,4 +14,4 @@ switching.
 * 1: When starting multitasking .
 * 2:After returnning from ISR which causes set the ready state for task with higher priority than current running task.
 * 3: After returnnung from systick timer interrupt if it is noticed that a higher priority task ready than the current running task.
-*                                                     -----------
+                                                    -----------
