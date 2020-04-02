@@ -1,4 +1,4 @@
-# How-UC-OS-II-switches-between-tasks-in-ARM-M4-arch-f
+# How-UC-OS-II-switches-between-tasks-in-ARM-M4-arch-with-gcc
 ARM-CM4 provides many facilities to make OS implementation OS implementation easier
 and more efficient. For example: 
 * Shadowed stack pointer: Two stack pointers are available. The MSP is used
