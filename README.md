@@ -10,3 +10,8 @@ the heartbeat of os by generating a regular interrupt to switch between tasks if
 operations of embedded OSs such as the implementation of context
 switching.
  *                                                       ------------
+ *In this article we will focus on how uc-os switches between tasks however,uc/os always executes the highest priority task ready to run in  different cases .for examples :
+1: When starting multitasking .
+2:After returnning from ISR which causes set the ready state for task with higher priority than current running task.
+3: After returnnung from systick timer interrupt if it is noticed that a higher priority task ready than the current running task.
+                                                     -----------
