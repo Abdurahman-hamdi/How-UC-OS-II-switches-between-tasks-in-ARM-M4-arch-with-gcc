@@ -22,7 +22,7 @@ switching.
 *Pendsv exception:this type of exception is set with the lowest priority in the system to handle switching between tasks,and triggered by uc/os services when actual context switching is needed.being this exception is set with the lowest priority ,it improves the system respone to hardware interrupts by delaying context switching until all other IRQ handlers have completed their processing.
 
 *Two stack pointers: these pointers provide the usage two separate stacks, one(psp,process stack pointer) used by uc/os tasks and the other (Msp,main stack pointer) used by IRQ handlers,when uc/os starts multitasking it sets psp to be used in threed execution(tasks stack). however,the selection between these pointers is done by modification bit 1 of the CONTROL register (1=psp,0=msp) or modification bit 2 of EXC_RETURN value which is saved in link register register during execption returning as shown in figure 8:10 ,for more information go to "The Definitive Guide toARM Cortex-M3 and Cortex-M4 Processors Third Edition"chapter8
-
+ 
 
 ![JVHK](https://user-images.githubusercontent.com/60859162/78462385-bd09cd00-76d1-11ea-87b8-7c790eacec40.PNG)
 
@@ -38,7 +38,7 @@ exception return), the value of the return address also needs to be saved by the
 
 *ostcbcur:is a pointer of tcb type which points to the current running task tcb.
 
-*ostcbhighrdy:is a pointer of tcb type which points to the high priority task tcb rdy to run .
+*ostcbhighrdy:is a pointer of tcb type which points to the higher priority task tcb rdy to run .
 
 ![ghhg](https://user-images.githubusercontent.com/60859162/78462211-402a2380-76d0-11ea-9800-0fac9f2f6158.PNG)
 
