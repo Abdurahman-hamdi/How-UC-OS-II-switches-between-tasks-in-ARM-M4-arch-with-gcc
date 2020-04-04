@@ -26,8 +26,10 @@ switching.
 
 ![JVHK](https://user-images.githubusercontent.com/60859162/78461444-3cdf6980-76c9-11ea-96a9-79dd91360137.PNG)
 
-*Cpu automatically performs stacking by pushing R0-R3, R12, LR, and PSR which are called “caller saved registers.”and restore them at exception exit under the control of the processor’s hardware.In this way when returned to the interrupted program,all the registers would have thesame value as when the interrupt entry sequence started. In addition, since the value of the return address (PC) is not stored in LR as in normal C function calls (the exceptionmechanism puts an EXC_RETURN code in LR at exception entry, which is used in
-exception return), the value of the return address also needs to be saved by the exception sequence. So in total eight registers need to be saved during the exception handling sequence on the Cortex-M3 or Cortex-M4 processors.
+*Cpu automatically performs stacking by pushing R0-R3, R12, LR, and PSR which are called “caller saved registers.”and restore them at exception exit under the control of the processor’s hardware.In this way when returned to the interrupted program,all the registers would have the same value as when the interrupt entry sequence started. In addition, since the value of the return address (PC) is not stored in LR as in normal C function calls (the exceptionmechanism puts an EXC_RETURN code in LR at exception entry, which is used in
+exception return), the value of the return address also needs to be saved by the exception sequence. So in total eight registers need to be saved during the exception handling sequence on the  Cortex-M4 processors.
+
+###Now it is time to start context switching 😁😁!
 
 
 
