@@ -24,19 +24,24 @@ switching.
 *Two stack pointers: these pointers provide the usage two separate stacks, one(psp,process stack pointer) used by uc/os tasks and the other (Msp,main stack pointer) used by IRQ handlers,when uc/os starts multitasking it sets psp to be used in threed execution(tasks stack). however,the selection between these pointers is done by modification bit 1 of the CONTROL register (1=psp,0=msp) or modification bit 2 of EXC_RETURN value which is saved in link register register during execption returning as shown in figure 8:10 ,for more information go to "The Definitive Guide toARM Cortex-M3 and Cortex-M4 Processors Third Edition"chapter8
 
 
-![JVHK](https://user-images.githubusercontent.com/60859162/78461444-3cdf6980-76c9-11ea-96a9-79dd91360137.PNG)
+![JVHK](https://user-images.githubusercontent.com/60859162/78462385-bd09cd00-76d1-11ea-87b8-7c790eacec40.PNG)
 
 *Cpu automatically performs stacking by pushing R0-R3, R12, LR, and PSR which are called “caller saved registers.”and restore them at exception exit under the control of the processor’s hardware.In this way when returned to the interrupted program,all the registers would have the same value as when the interrupt entry sequence started. In addition, since the value of the return address (PC) is not stored in LR as in normal C function calls (the exceptionmechanism puts an EXC_RETURN code in LR at exception entry, which is used in
 exception return), the value of the return address also needs to be saved by the exception sequence. So in total eight registers need to be saved during the exception handling sequence on the  Cortex-M4 processors.
 
-### Now it is time to start context switching 😁😁!
+### Now it is time to start context switching 😁😁!.
+
 *UC/OS uses set of variables to keep track the operation of multitasking kernal like ospriocur,ospriohighrdy,ostcbcur and ostcbhighrdy.
 *ospriocur:the priority of current running task.
+
 *ospriohighrdy:the priority of task has just becomed ready and more than the priority of current running task.
+
 *ostcbcur:is a pointer of tcb type which points to the current running task tcb.
+
 *ostcbhighrdy:is a pointer of tcb type which points to the high priority task tcb rdy to run .
 
-![ghhg](https://user-images.githubusercontent.com/60859162/78461986-2687dc80-76ce-11ea-9c16-c416e6ff952f.PNG)
+![ghhg](https://user-images.githubusercontent.com/60859162/78462211-402a2380-76d0-11ea-9800-0fac9f2f6158.PNG)
+
 
 
 
