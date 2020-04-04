@@ -32,7 +32,7 @@ exception return), the value of the return address also needs to be saved by the
 ### Now it is time to start context switching 😁😁!.
 
 *UC/OS uses set of variables to keep track the operation of multitasking kernal like ospriocur,ospriohighrdy,ostcbcur and ostcbhighrdy.
-*ospriocur:the priority of current running task.
+*ospriocur:the priority of current running task,as shown in figure 3.13.
 
 *ospriohighrdy:the priority of task has just becomed ready and more than the priority of current running task.
 
