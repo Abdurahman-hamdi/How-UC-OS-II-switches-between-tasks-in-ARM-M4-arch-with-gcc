@@ -15,4 +15,13 @@ switching.
 * 2:After returnning from ISR which causes set the ready state for task with higher priority than current running task.
 * 3: After returnnung from systick timer interrupt if it is noticed that a higher priority task ready than the current running task.
 *                                                   -----------
+* ##### Before going into how uc/os performs switching between tasks on CM4 ARCH,lets talk about the features provided by CM4 arch which uc/os uses .
+
+*Systick timer :a 24 bit count down timer optionally used uc/os by kernal to provide a regular interupt to serve tasks dly and timing requests.
+
+*Pendsv exception:this type of exception is set with the lowest priority in the system to handle switching between tasks,and triggered by uc/os services when actual context switching is needed.being this exception is set with the lowest priority ,it improves the system respone to hardware interrupts by delaying context switching until all other IRQ handlers have completed their processing.
+
+*Two stack pointers: these pointers provide the usage two separate stacks, one(psp,process stack pointer) used by uc/os tasks and the other (Msp,main stack pointer) used by IRQ handlers.
+
+
 
