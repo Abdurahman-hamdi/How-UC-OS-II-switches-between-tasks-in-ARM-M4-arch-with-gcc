@@ -30,7 +30,7 @@ switching.
 exception return), the value of the return address also needs to be saved by the exception sequence. So in total eight registers need to be saved during the exception handling sequence on the  Cortex-M4 processors.
 
 ### Now it is time to start context switching 😁😁!
-*UC/OS uses set of variables to keep track the operation of multitasking kernal like ospriocur,ospriohighrdy,ostcbcur and ostcbhighrdy
+*UC/OS uses set of variables to keep track the operation of multitasking kernal like ospriocur,ospriohighrdy,ostcbcur and ostcbhighrdy.
 *ospriocur:the priority of current running task.
 *ospriohighrdy:the priority of task has just becomed ready and more than the priority of current running task.
 *ostcbcur:is a pointer of tcb type which points to the current running task tcb.
