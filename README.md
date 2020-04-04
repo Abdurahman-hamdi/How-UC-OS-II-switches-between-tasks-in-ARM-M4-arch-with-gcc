@@ -43,6 +43,17 @@ exception return), the value of the return address also needs to be saved by the
 ![ghhg](https://user-images.githubusercontent.com/60859162/78462211-402a2380-76d0-11ea-9800-0fac9f2f6158.PNG)
 
 
+*suppose cpu is process TASK_A.the systic timer generates an interrupt and notices that thier is another task (TASK_B), with high priority than TASK_A rdy to run,the pseudocode for timer isr is :if(new_high_prio_tsk()==true)
+                                                   {set pending state of pendsv}.
+                                                   
+                                                                                                      
+*The figure below shows the system state while TASK_A running before TASK_B becomes ready.
+
+
+![4](https://user-images.githubusercontent.com/60859162/78463240-d5321a00-76da-11ea-87d6-913333809096.jpg)
+
+
+
 
 
 
