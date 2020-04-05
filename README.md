@@ -50,7 +50,8 @@ exception return), the value of the return address also needs to be saved by the
 *The figure below shows the system state while TASK_A running before TASK_B becomes ready.
 
 
-![4](https://user-images.githubusercontent.com/60859162/78463240-d5321a00-76da-11ea-87d6-913333809096.jpg)
+![78463240-d5321a00-76da-11ea-87d6-913333809096](https://user-images.githubusercontent.com/60859162/78463891-e2eb9d80-76e2-11ea-8faf-fd15b00bf8a0.jpg)
+
 
 
 
