@@ -52,6 +52,12 @@ exception return), the value of the return address also needs to be saved by the
 
 ![78463240-d5321a00-76da-11ea-87d6-913333809096](https://user-images.githubusercontent.com/60859162/78463891-e2eb9d80-76e2-11ea-8faf-fd15b00bf8a0.jpg)
 
+*Once new_high_prio_tsk() has detected TASK_B is ready to run ,the timer isr sets the pending state for pendsv exception ,after timer isr finishes and thier are no other pended exceptions, the sytem enters pendsv isr to do context switching ,the system during pendsv handler enterance(autmatic stacking/push R0-R3,LR,PC,PSR using psp into task_A stack  ) is described as .
+
+![4](https://user-images.githubusercontent.com/60859162/78464025-b769b280-76e4-11ea-9ebd-935da1d7f7c2.jpg)
+
+
+
 
 
 
