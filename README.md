@@ -34,7 +34,7 @@ exception return), the value of the return address also needs to be saved by the
 *UC/OS uses set of variables to keep track the operation of multitasking kernal like ospriocur,ospriohighrdy,ostcbcur and ostcbhighrdy.
 *ospriocur:the priority of current running task,as shown in figure 3.13.
 
-*ospriohighrdy:the priority of task has just becomed ready and more than the priority of current running task.
+*ospriohighrdy:the priority of task has just becomed ready and higher(lowest priority number) than the priority of current running task.
 
 *ostcbcur:is a pointer of tcb type which points to the current running task tcb.
 
